@@ -136,20 +136,6 @@ export const Footer = () => {
             <p className="text-gray-400 font-grotesk text-sm">
               © {currentYear} Chiaky. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-pink-500 transition-colors text-sm font-grotesk"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-pink-500 transition-colors text-sm font-grotesk"
-              >
-                Terms of Service
-              </a>
-            </div>
           </div>
         </motion.div>
       </div>

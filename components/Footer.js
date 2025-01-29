@@ -29,7 +29,7 @@ export const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {/* Brand Section */}
           <motion.div
             initial="hidden"
@@ -111,49 +111,16 @@ export const Footer = () => {
                   className="text-gray-300 hover:text-pink-500 transition-colors font-grotesk flex items-center"
                 >
                   <Phone size={16} className="mr-2" />
-                  +1 (234) 567-890
+                  +233 55 066 2793
                 </a>
               </li>
               <li>
                 <span className="text-gray-300 font-grotesk flex items-center">
                   <MapPin size={16} className="mr-2" />
-                  Tokyo, Japan
+                  Accra, Ghana
                 </span>
               </li>
             </ul>
-          </motion.div>
-
-          {/* Newsletter */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUpVariants}
-            className="space-y-6"
-          >
-            <h3 className="text-white text-lg font-clash font-semibold">
-              Newsletter
-            </h3>
-            <p className="text-gray-300 font-grotesk">
-              Subscribe to my newsletter for the latest updates and creative
-              insights.
-            </p>
-            <form className="space-y-4">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 font-grotesk"
-                />
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full px-4 py-3 bg-pink-500 text-white rounded-lg font-grotesk hover:bg-pink-600 transition-colors"
-              >
-                Subscribe
-              </motion.button>
-            </form>
           </motion.div>
         </div>
 

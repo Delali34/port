@@ -2,16 +2,16 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    "/chikay (1).jpg",
-    "/chikay (2).jpg",
-    "/chikay (3).jpg",
-    "/chikay (4).jpg",
-    "/chikay (5).jpg",
-    "/chikay (6).jpg",
+    "/chiaky (1).jpeg",
+    "/chiaky (2).jpeg",
+    "/chiaky (3).jpeg",
+    "/chiaky (4).jpeg",
+    "/chiaky (5).jpeg",
   ];
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Creative Developer & Digital Artist
+            Musings of A Concerned African Woman{" "}
           </motion.p>
 
           <motion.div
@@ -77,13 +77,15 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-pink-500 text-white rounded-full font-grotesk font-medium text-lg hover:bg-pink-600 transition-colors"
-            >
-              Explore My Work
-            </motion.button>
+            <Link href="#about">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-pink-500 text-white rounded-full font-grotesk font-medium text-lg hover:bg-pink-600 transition-colors"
+              >
+                Scroll Down
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

@@ -61,7 +61,7 @@ export const About = () => {
                 className="relative h-64 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
-                  src="/chikay (1).jpg"
+                  src="/chiaky (1).jpeg"
                   alt="Portfolio Image 1"
                   className="object-cover w-full h-full"
                 />
@@ -72,7 +72,7 @@ export const About = () => {
                 className="relative h-40 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
-                  src="/chikay (2).jpg"
+                  src="/chiaky (2).jpeg"
                   alt="Portfolio Image 2"
                   className="object-cover w-full h-full"
                 />
@@ -85,7 +85,7 @@ export const About = () => {
                 className="relative h-40 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
-                  src="/chikay (3).jpg"
+                  src="/chiaky (3).jpeg"
                   alt="Portfolio Image 3"
                   className="object-cover w-full h-full"
                 />
@@ -96,7 +96,7 @@ export const About = () => {
                 className="relative h-64 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
-                  src="/chikay (4).jpg"
+                  src="/chiaky (4).jpeg"
                   alt="Portfolio Image 4"
                   className="object-cover w-full h-full"
                 />
@@ -108,21 +108,35 @@ export const About = () => {
           <motion.div variants={itemVariants} className="text-white space-y-8">
             <motion.div variants={itemVariants} className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-clash font-bold tracking-tight bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                Crafting Digital
+                Get to know
                 <br />
-                <span className="text-white">Experiences</span>
+                <span className="text-white">Chiaky</span>
               </h2>
               <div className="w-20 h-1.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full" />
             </motion.div>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-gray-300 font-grotesk leading-relaxed"
+              className="text-sm md:text-sm text-gray-300 font-grotesk leading-relaxed"
             >
-              As a Creative Developer and Digital Artist, I blend technical
-              expertise with artistic vision to create immersive digital
-              experiences. With a passion for innovative design and cutting-edge
-              technology, I transform ideas into captivating realities.
+              Hello, my name is Chiaky Otuteye, and when I can’t stop thinking
+              about something, I write it down. I have always wondered why
+              important issues that affect everyone are discussed in language
+              that the average person, like you and I, find difficult to
+              understand.
+            </motion.p>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-sm md:text-sm text-gray-300 font-grotesk leading-relaxed"
+            >
+              My goal is to bring the issues that affect the world, especially
+              my African brothers and sisters, right to your doorstep in easily
+              understandable and digestible language. Conversation is important,
+              and that is something I hope to see here. Through these
+              thought-provoking pieces, I will share my thoughts, and I will
+              encourage you to do same. We all have a role to play in creating
+              the world we see, and all we have is each other
             </motion.p>
 
             <motion.div

@@ -15,7 +15,6 @@ const Page = () => {
         <Hero />
         <About />
         <Blog />
-        <Footer />
       </div>
     </>
   );

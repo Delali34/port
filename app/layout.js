@@ -17,7 +17,7 @@ const geistMono = localFont({
 export const metadata = {
   title: "Chiaky",
   description:
-    "Chiaky is a passionate doctor that has other interesting interest",
+    " Chiaky Otuteye, and when I can’t stop thinking about something, I write it down. I have always wondered why important issues that affect everyone are discussed in language that the average person, like you and I, find difficult to understand.",
 };
 
 export default function RootLayout({ children }) {

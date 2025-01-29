@@ -1,84 +1,31 @@
-// components/Blog.js
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
 import { ArrowRight, Clock, User } from "lucide-react";
 
 export const Blog = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [blogPosts, setBlogPosts] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const blogPosts = [
-    {
-      title: "The Art of Digital Storytelling",
-      excerpt:
-        "Exploring how visual narratives shape our digital experiences and connect with audiences on a deeper level.",
-      category: "Digital Art",
-      readTime: "5 min read",
-      author: "Chiaky",
-      image: "/chikay (1).jpg",
-      date: "Apr 15, 2024",
-    },
-    {
-      title: "Creative Process Unveiled",
-      excerpt:
-        "A behind-the-scenes look at my creative workflow and how I bring digital art projects to life.",
-      category: "Process",
-      readTime: "8 min read",
-      author: "Chiaky",
-      image: "/chikay (2).jpg",
-      date: "Apr 10, 2024",
-    },
-    {
-      title: "Future of Interactive Design",
-      excerpt:
-        "Discussing emerging trends in interactive design and what they mean for digital artists.",
-      category: "Design",
-      readTime: "6 min read",
-      author: "Chiaky",
-      image: "/chikay (3).jpg",
-      date: "Apr 5, 2024",
-    },
-  ];
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const data = await response.json();
+        setBlogPosts(data.slice(0, 3)); // Limit to 3 posts
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
+    fetchPosts();
+  }, []);
 
   return (
     <section className="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
-      <motion.div
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        className="max-w-7xl mx-auto px-6 lg:px-8"
-      >
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          variants={itemVariants}
-          className="text-center mb-16 md:mb-24"
-        >
+        <div className="text-center mb-16 md:mb-24">
           <h2 className="text-4xl md:text-5xl font-clash font-bold text-white mb-6">
             Latest from the <span className="text-pink-500">Blog</span>
           </h2>
@@ -86,14 +33,13 @@ export const Blog = () => {
             Dive into my thoughts on art, design, and creativity. Discover
             insights, tips, and behind-the-scenes looks at my creative process.
           </p>
-        </motion.div>
+        </div>
 
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {blogPosts.map((post, index) => (
             <motion.article
-              key={index}
-              variants={itemVariants}
+              key={post.id}
               className="group relative bg-gray-900/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-800"
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
@@ -101,7 +47,7 @@ export const Blog = () => {
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
                 <motion.img
-                  src={post.image}
+                  src={post.coverImage}
                   alt={post.title}
                   className="object-cover w-full h-full"
                   animate={{
@@ -138,11 +84,12 @@ export const Blog = () => {
                       {post.author}
                     </div>
                   </div>
-                  <span>{post.date}</span>
+                  <span>{new Date(post.createdAt).toDateString()}</span>
                 </div>
 
                 {/* Read More Link */}
-                <motion.div
+                <motion.a
+                  href={`/blog/${post.slug}`}
                   className="pt-4 flex items-center text-pink-500 font-grotesk font-medium"
                   animate={{
                     x: hoveredIndex === index ? 5 : 0,
@@ -151,24 +98,25 @@ export const Blog = () => {
                 >
                   Read More
                   <ArrowRight size={16} className="ml-2" />
-                </motion.div>
+                </motion.a>
               </div>
             </motion.article>
           ))}
         </div>
 
         {/* View All Button */}
-        <motion.div variants={itemVariants} className="text-center mt-16">
-          <motion.button
+        <div className="text-center mt-16">
+          <motion.a
+            href="/blog"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 bg-pink-500 text-white rounded-full font-grotesk font-medium text-lg hover:bg-pink-600 transition-colors inline-flex items-center"
           >
             View All Posts
             <ArrowRight size={20} className="ml-2" />
-          </motion.button>
-        </motion.div>
-      </motion.div>
+          </motion.a>
+        </div>
+      </div>
     </section>
   );
 };

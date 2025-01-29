@@ -12,7 +12,6 @@ const Page = () => {
     <>
       <Fonts />
       <div>
-        <Navbar />
         <Hero />
         <About />
         <Blog />

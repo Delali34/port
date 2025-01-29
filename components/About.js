@@ -37,8 +37,8 @@ export const About = () => {
     >
       {/* Background Design Element */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-pink-500 rounded-full filter blur-[128px] -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-[128px] translate-x-1/2 translate-y-1/2" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full filter blur-[128px] -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full filter blur-[128px] translate-x-1/2 translate-y-1/2" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -58,7 +58,7 @@ export const About = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="relative h-64 rounded-2xl overflow-hidden"
+                className="relative h-64 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
                   src="/chikay (1).jpg"
@@ -69,7 +69,7 @@ export const About = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="relative h-40 rounded-2xl overflow-hidden"
+                className="relative h-40 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
                   src="/chikay (2).jpg"
@@ -82,7 +82,7 @@ export const About = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="relative h-40 rounded-2xl overflow-hidden"
+                className="relative h-40 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
                   src="/chikay (3).jpg"
@@ -93,7 +93,7 @@ export const About = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="relative h-64 rounded-2xl overflow-hidden"
+                className="relative h-64 rounded-2xl overflow-hidden border-2 border-white/10 hover:border-pink-500 transition-all duration-300"
               >
                 <img
                   src="/chikay (4).jpg"
@@ -107,11 +107,12 @@ export const About = () => {
           {/* Content */}
           <motion.div variants={itemVariants} className="text-white space-y-8">
             <motion.div variants={itemVariants} className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-clash font-bold tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-clash font-bold tracking-tight bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
                 Crafting Digital
-                <span className="text-pink-500"> Experiences</span>
+                <br />
+                <span className="text-white">Experiences</span>
               </h2>
-              <div className="w-20 h-1.5 bg-pink-500 rounded-full" />
+              <div className="w-20 h-1.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full" />
             </motion.div>
 
             <motion.p
@@ -129,7 +130,7 @@ export const About = () => {
               className="grid grid-cols-2 gap-8 py-8"
             >
               <div>
-                <h3 className="text-3xl font-clash font-bold text-pink-500 mb-2">
+                <h3 className="text-3xl font-clash font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-2">
                   5+
                 </h3>
                 <p className="text-gray-300 font-grotesk">
@@ -137,7 +138,7 @@ export const About = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-3xl font-clash font-bold text-pink-500 mb-2">
+                <h3 className="text-3xl font-clash font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-2">
                   100+
                 </h3>
                 <p className="text-gray-300 font-grotesk">Projects Completed</p>
@@ -145,7 +146,9 @@ export const About = () => {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-clash font-bold">Expertise</h3>
+              <h3 className="text-2xl font-clash font-bold text-white">
+                Expertise
+              </h3>
               <div className="flex flex-wrap gap-3">
                 {[
                   "UI/UX Design",
@@ -155,12 +158,13 @@ export const About = () => {
                   "Motion Graphics",
                   "Brand Identity",
                 ].map((skill) => (
-                  <span
+                  <motion.span
                     key={skill}
-                    className="px-4 py-2 bg-white/10 rounded-full text-sm font-grotesk hover:bg-pink-500 transition-colors duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    className="px-4 py-2 bg-white/10 rounded-full text-sm font-grotesk hover:bg-gradient-to-r from-pink-500 to-purple-500 transition-all duration-300"
                   >
                     {skill}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </motion.div>

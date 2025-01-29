@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export const NavLinks = ({ isMobile, closeMenu }) => {
   const links = [
-    { title: "Home", href: "#home" },
-    { title: "About", href: "#about" },
+    { title: "Home", href: "/" },
+    { title: "Blog", href: "/blog" },
     { title: "Projects", href: "#projects" },
     { title: "Contact", href: "#contact" },
   ];

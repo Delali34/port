@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { NavLinks } from "./NavLinks";
-
+import Link from "next/link";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -28,16 +28,18 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
-          >
-            <span className="text-white text-2xl font-clash font-semibold tracking-wider">
-              CHIAKY
-            </span>
-          </motion.div>
+          <Link href="/">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex-shrink-0"
+            >
+              <span className="text-white text-2xl font-clash font-semibold tracking-wider">
+                CHIAKY
+              </span>
+            </motion.div>
+          </Link>
 
           <motion.div
             initial={{ opacity: 0, y: -20 }}

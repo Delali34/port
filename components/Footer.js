@@ -20,7 +20,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-black relative overflow-hidden">
+    <footer id="footer" className="bg-black relative overflow-hidden">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-pink-500 rounded-full filter blur-[128px] -translate-x-1/2 translate-y-1/2" />
@@ -71,7 +71,7 @@ export const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-4">
-              {["Home", "About", "Projects", "Blog", "Contact"].map((item) => (
+              {["Home", "About", "Blog", "Contact"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}

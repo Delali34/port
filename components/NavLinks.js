@@ -5,8 +5,8 @@ export const NavLinks = ({ isMobile, closeMenu }) => {
   const links = [
     { title: "Home", href: "/" },
     { title: "Blog", href: "/blog" },
-    { title: "Projects", href: "#projects" },
-    { title: "Contact", href: "#contact" },
+
+    { title: "Contact", href: "#footer" },
   ];
 
   return links.map((link) => (

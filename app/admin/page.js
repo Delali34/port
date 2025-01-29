@@ -35,13 +35,12 @@ export default function AdminPage() {
   const router = useRouter();
 
   const categories = [
-    "Technology",
-    "Design",
-    "Development",
-    "Business",
-    "Tutorial",
+    "Health",
+    "Personal Growth",
     "News",
-    "Other",
+    "Women and Girls",
+    "Fiction",
+    "Poetry",
   ];
 
   useEffect(() => {

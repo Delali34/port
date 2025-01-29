@@ -22,12 +22,15 @@ export const Blog = () => {
   }, []);
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
+    <section
+      id="blog"
+      className="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-4xl md:text-5xl font-clash font-bold text-white mb-6">
-            Latest from the <span className="text-pink-500">Blog</span>
+            Latest from my <span className="text-pink-500">Blog</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-grotesk max-w-2xl mx-auto">
             Dive into my thoughts on art, design, and creativity. Discover

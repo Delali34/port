@@ -96,7 +96,7 @@ export const Footer = () => {
               Contact
             </h3>
             <ul className="space-y-4">
-              <li>
+              {/* <li>
                 <a
                   href="mailto:hello@chiaky.com"
                   className="text-gray-300 hover:text-pink-500 transition-colors font-grotesk flex items-center"
@@ -104,8 +104,8 @@ export const Footer = () => {
                   <Mail size={16} className="mr-2" />
                   hello@chiaky.com
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="tel:+1234567890"
                   className="text-gray-300 hover:text-pink-500 transition-colors font-grotesk flex items-center"
@@ -113,7 +113,7 @@ export const Footer = () => {
                   <Phone size={16} className="mr-2" />
                   +233 55 066 2793
                 </a>
-              </li>
+              </li> */}
               <li>
                 <span className="text-gray-300 font-grotesk flex items-center">
                   <MapPin size={16} className="mr-2" />

@@ -117,7 +117,7 @@ export const About = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-sm md:text-sm text-gray-300 font-grotesk leading-relaxed"
+              className="text-lg md:text-xl text-gray-300 font-grotesk leading-relaxed"
             >
               Hello, my name is Chiaky Otuteye, and when I can’t stop thinking
               about something, I write it down. I have always wondered why
@@ -128,7 +128,7 @@ export const About = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-sm md:text-sm text-gray-300 font-grotesk leading-relaxed"
+              className="text-lg md:text-xl text-gray-300 font-grotesk leading-relaxed"
             >
               My goal is to bring the issues that affect the world, especially
               my African brothers and sisters, right to your doorstep in easily
@@ -139,7 +139,7 @@ export const About = () => {
               the world we see, and all we have is each other
             </motion.p>
 
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="grid grid-cols-2 gap-8 py-8"
             >
@@ -157,9 +157,9 @@ export const About = () => {
                 </h3>
                 <p className="text-gray-300 font-grotesk">Projects Completed</p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div variants={itemVariants} className="space-y-6">
+            {/* <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-clash font-bold text-white">
                 Expertise
               </h3>
@@ -181,7 +181,7 @@ export const About = () => {
                   </motion.span>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>
